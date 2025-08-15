@@ -1,0 +1,34 @@
+<!DOCTYPE html>  
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Cartas</title>
+    <link rel="stylesheet" href="/static/styles/estilo.css" />
+</head>
+<body class="pg-jogo">
+
+    <div class="computador">
+        <img src="/img/cartas/verso.png" alt="Carta Oculta">
+        <img src="/img/cartas/verso.png" alt="Carta Oculta">
+        <img src="/img/cartas/verso.png" alt="Carta Oculta">
+    </div>
+    <div class="mesa"></div>
+    <div class="cartas_jogo">
+        <img id="carta1" src="/img/cartas/carta_bela.png" alt="bela">
+        <img id="carta2" src="/img/cartas/carta_branca.png" alt="branca de neve">
+        <img id="carta3" src="/img/cartas/carta_merida.png" alt="merida">
+        <img id="carta4" src="/img/cartas/carta_moana.png" alt="moana">
+        <img id="carta5" src="/img/cartas/carta_rapunzel.png" alt="rapunzel">
+        <img id="carta6" src="/img/cartas/carta_tiana.png" alt="tiana">
+    </div>
+
+    <button class="botao_jogo" id="jogar">Jogar</button>
+
+
+    <p class="ponto_jogador">Jogador: <span id="pontos-jogador">0</span></p>
+    <p class="ponto_computador">Computador: <span id="pontos-maquina">0</span></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

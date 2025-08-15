@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+body {
+    height: 0;
+    margin: 0;
+}
+/* pagina index */
+body.pagina-index {
+    background-image: url(../img/fundo.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Título */
+.container_titulo_index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    color: #ffe5b6;
+    font-size: 62px;
+    font-weight: 100;
+    letter-spacing: 6px;
+    line-height: 1.1;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px #000;
+    padding: 20px;
+}
+
+/* Botão */
+.botao_index {
+    display: inline-block;
+    background-color: #1d2f65d0;
+    color: #ffe5b6;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #f2cf6d;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.botao_index:hover {
+    transform: translateY(-3px);
+    box-shadow: 7px 7px 7px #f2cf6d;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container_titulo_index {
+        font-size: 45px;
+        letter-spacing: 3px;
+        padding: 15px;
+    }
+
+    .botao_index {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container_titulo_index {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .botao_index {
+        font-size: 1rem;
+        padding: 6px 14px;
+    }
+}
+
+#glitter-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.glitter {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #fff, #ffc0cb, #ffd700);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall 4s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+/*página INICIO.HTML */
+
+
+body.pg-inicio {
+    margin: 0;
+    padding: 0;
+    background-image: url(/img/salao.png);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 60px;
+    color: #fce6c7;
+    margin: 50px 0 30px;
+    font-family: "Dancing Script", cursive;
+    text-shadow: 2px 2px 5px #000;
+  }
+  
+  .cartas {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 40px;
+    margin-bottom: 50px;
+  }
+  
+  .cartas img {
+    object-fit: cover; /* ajusta o corte da imagem */
+    border-radius: 8px; /* opcional: cantos arredondados */
+    width: 220px;
+    height: 305px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .cartas img:hover {
+    transform: scale(1.08);
+  }
+  
+  a.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #1e2b64;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #e8c886;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 40px;
+  }
+  
+  a.btn:hover {
+    background-color: #2f3b8a;
+    transform: translateY(-3px);
+  }
+  
+
+  /*JOGOOOO*/
+  body.pg-jogo{
+    margin: 0;
+    padding: 0;
+    background-image: url(/img/salao.png);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+  }
+ .mesa {
+  width: 850px;
+  height: 476px;
+  background: #fffdec;
+  border-radius: 19px;
+  opacity: 0.5;
+  position: absolute;
+  top: 50%; /* Centraliza no eixo Y */
+  left: 50%; /* Centraliza no eixo X */
+  transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+  z-index: 0;
+}
+
+.cartas_jogo{
+  display: flex;
+  gap: 20px;
+  position: fixed;      /* fixada na tela */
+  bottom: 30px;         /* 30px do rodapé */
+  left: 50%;            /* posiciona no meio horizontal */
+  transform: translateX(-50%); /* corrige pra centralizar exatamente */
+  justify-content: center;
+  z-index: 10;          /* pra garantir que fique acima de outros elementos */
+}
+.cartas_jogo img{
+  width: 150px;
+  z-index: 1;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+ .cartas_jogo img:hover {
+    transform: scale(1.08);
+  }
+
+.computador{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+  width: fit-content; /* ajusta a largura para o conteúdo */
+  margin: 0 auto;     /* centraliza horizontalmente */
+  height: auto;
+  margin-top: 20px;
+}
+
+.computador img {
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+}
+.ponto_computador{
+  text-align: start;
+  font-weight: bold;
+  position: absolute; /* ou use fixed se for em relação à tela */
+  top: 0;
+  left: 0;
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  margin-left: 20px;
+}
+.ponto_jogador{
+  text-align: start;
+  position: absolute;   /* ou fixed, dependendo do contexto */
+  bottom: 20px;
+  left: 0;
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  margin-left: 20px;
+}
+
+.ponto_jogador span,
+.ponto_computador span {
+  display: block;
+  margin: 4px auto 0;
+  text-align: center;
+  width: fit-content;
+}
+.botao_jogo{
+    background-color: #1d2f65d0;
+    color: #ffe5b6;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #f2cf6d;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: "Dancing Script", cursive;
+    text-align: center; 
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px #000;
+    position: relative;
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

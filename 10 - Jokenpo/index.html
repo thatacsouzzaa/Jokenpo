@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpo</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/all-animation@3.0.7/dist/all-animation.min.css">
+</head>
+<body>
+    <div class="imagem">
+        <img src="img/Jo-Ken-Po.png" alt="jokenpo">
+    </div>
+    <div class="jokenpo">
+        <div class="area">
+            <div class="pontuacao">
+                <h4>Você</h4>
+                <p id="pontos-jogador">0</p>
+            </div>
+            <div class="escolha">
+                <img src="img/pedra.png" alt="pedra" id="pedra">
+                <img src="img/papel.png" alt="papel" id="papel">
+                <img src="img/tesoura.png" alt="tesoura" id="tesoura">
+            </div>
+        </div>
+        <button>Jogar</button>
+        <div class="area">
+            <div class="pontuacao">
+                <h4>Maquina</h4>
+                <p id="pontos-maquina">0</p>
+            </div>
+            <div class="escolha-pc">
+                <img src="img/pedra.png" alt="pedra" id="pedra-pc">
+                <img src="img/papel.png" alt="papel" id="papel-pc">
+                <img src="img/tesoura.png" alt="tesoura" id="tesoura-pc">
+            </div>
+        </div>
+    </div>
+    <div class="resultado">
+        Resultado:
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
